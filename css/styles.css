@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  background-color: gray;
+}
+
+.index-conatiner {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 3fr;
+  grid-template-rows: 0.3fr 5fr 0.5fr;
+  grid-template-areas:
+    "header header header"
+    "section section section"
+    "footer footer footer";
+}
+
+nav {
+  width: 100%;
+}
+
+header {
+  z-index: 3;
+  background-color: whitesmoke;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  grid-area: header;
+}
+
+ul {
+  list-style: none;
+  background-color: whitesmoke;
+  font-size: 0; /* truco por el uso de inline-block*/
+}
+
+li {
+  list-style: none;
+  text-align: center;
+  /* AQUI EL DISPLAY ES LO IMPORTANTE */
+  display: inline-block;
+  /* Yo tenia solo display flex y ocasionaba desboramiento*/
+  width: 25%;
+  font-size: 20em;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: background-color 0.5s;
+  padding: 1vw;
+}
+
+li:hover {
+  background-image: linear-gradient(
+    to left,
+    rgb(233, 187, 194),
+    pink,
+    whitesmoke
+  );
+}
+
+a {
+  padding: 1vw 1vw;
+  text-decoration: none;
+  color: rgb(250, 123, 144);
+  font-size: 25px;
+  letter-spacing: 0.4vw;
+}
+
+.h1-contact-title {
+  letter-spacing: 10px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.button-cantainer > .button-send {
+  background-color: pink;
+}
+
+section {
+  grid-area: section;
+  background-color: whitesmoke;
+  display: block;
+  margin: 100px auto;
+  text-align: center;
+  border-bottom: solid;
+  border-top: solid;
+  padding: 60px;
+}
+
+p {
+  margin: 20px;
+}
+
+.icons,
+.logos {
+  text-align: center;
+}
+.bici-logo {
+  margin-bottom: 10px;
+}
+
+footer {
+  grid-area: footer;
+  margin-top: 50px;
+}
+.logos img {
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+.information {
+  font-size: 30px;
+}
+
+/*SECCIÓN PROYECTS DESKTOP CON GRID */
+
+main img {
+  margin: 50px;
+  width: 300px;
+  border-radius: 20px;
+}
+
+p {
+  margin: 40px;
+}
+
+article h3 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* seccion proyectos DESKTOP */
+
+.grid-proyect-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: (repeat, 4fr);
+  grid-template-areas:
+    "proyect-img1 proyect-info1"
+    "proyect-img2 proyect-info2"
+    "proyect-img3 proyect-info3"
+    "proyect-img4 proyect-info4";
+}
+.proyect-img:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.proyect-img {
+  margin: auto;
+}
+
+.proyect-info {
+  background-color: aquamarine;
+  grid-area: certification-info1;
+  margin: 50px;
+  border-radius: 20px;
+}
+
+.proyect-img1 {
+  grid-area: proyect-img1;
+}
+
+.proyect-info1 {
+  grid-area: proyect-info1;
+}
+
+.proyect-img2 {
+  grid-area: proyect-img2;
+}
+
+.proyect-info2 {
+  grid-area: proyect-info2;
+}
+
+.proyect-img3 {
+  grid-area: proyect-img3;
+}
+
+.proyect-info3 {
+  grid-area: proyect-info3;
+}
+
+.proyect-img4 {
+  grid-area: proyect-img4;
+}
+
+.proyect-info4 {
+  grid-area: proyect-info4;
+}
+
+/* SECCIÓN CERTIFICATIONS DESKTOP CON GRID*/
+
+.img-box {
+  margin: auto;
+  
+}
+
+.img-box:hover {
+    transform: scale(1.2, 1.2);
+    
+  }
+
+.certification-info {
+  background-color: aquamarine;
+  grid-area: certification-info1;
+  margin: 50px;
+  border-radius: 20px;
+}
+
+.grid-container-certificates {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 4fr);
+  grid-template-areas:
+    "img-box1 certification-info1"
+    "img-box2 certification-info2"
+    "img-box3 certification-info3"
+    "img-box4 certification-info4";
+}
+
+.img-box1 {
+  grid-area: "img-box1";
+}
+
+.certification-info1 {
+  grid-area: certification-info1;
+}
+
+.img-box2 {
+  grid-area: "img-box2";
+}
+
+.certification-info2 {
+  grid-area: certification-info2;
+}
+
+.img-box3 {
+  grid-area: "img-box3";
+}
+
+.certification-info3 {
+  grid-area: certification-info3;
+}
+
+.img-box4 {
+  grid-area: "img-box4";
+}
+
+.certification-info4 {
+  grid-area: certification-info4;
+}
+
+/* CONTACT */
+
+.form-section {
+  margin: 0 auto;
+  max-width: 800px;
+  background-color: whitesmoke;
+}
+
+fieldset {
+  text-align: center;
+}
+
+.mb-3 {
+  padding: 20px;
+}
+
+.btn-primary {
+  float: right;
+  margin-right: 50px;
+  width: 120px;
+  background-color: pink;
+  border-color: hsl(350, 100%, 88%);
+}
+
+.btn-primary:hover {
+  background-color: pink;
+  border-color: hsl(350, 100%, 88%);
+}
+
+/* MEDIA QUERIES  */
+@media screen and (max-width: 768px) /* DE 768pc para abajo */ {
+  footer {
+    margin-top: 5px;
+  }
+
+  .information {
+    font-size: 20px;
+  }
+
+  /* SECCIÓN PROYECTOS MOBILE*/
+
+  .proyects-heading {
+    text-align: center;
+  }
+
+  .grid-proyect-block {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(repeat, 8fr);
+    grid-template-areas:
+      "proyect-img1"
+      "proyect-info1"
+      "proyect-img2"
+      "proyect-info2"
+      "proyect-img3"
+      "proyect-info3"
+      "proyect-img4"
+      "proyect-info4";
+  }
+
+  .proyect-img1 img {
+    margin: 30px 30px;
+    border-radius: 20px;
+  }
+
+  .proyect-img2 img {
+    margin-top: 20px;
+    border-radius: 20px;
+  }
+
+  .proyect-img3 img {
+    margin-top: 20px;
+    border-radius: 20px;
+  }
+
+  .proyect-img4 img {
+    margin-top: 20px;
+    border-radius: 20px;
+  }
+
+  /* SECCIÓN certificates MOBILE */
+
+  .grid-container-certificates {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(repeat, 8fr);
+    grid-template-areas:
+      "img-box1"
+      "certification-info1"
+      "img-box2"
+      "certification-info2"
+      "img-box3"
+      "certification-info3"
+      "img-box4"
+      "certification-info4";
+  }
+
+  /* sección contact mobile */
+
+  .contact-footer {
+    margin-top: 30px;
+  }
+
+  .logos{
+      text-align: center;
+      margin-top: 100px;
+  }
+}
+
+
