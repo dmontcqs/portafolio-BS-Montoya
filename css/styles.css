@@ -83,11 +83,27 @@ a {
   margin-left: 50px;
 }
 
+
+.carousel-container{
+  height: 500px;
+}
+
+div .caption-section {
+  padding-top: unset;
+  padding-bottom: unset;
+  bottom: 50%;
+}
+
+div .first-caption{
+ color: black;
+}
+
+
 .button-cantainer > .button-send {
   background-color: pink;
 }
 
-section {
+.info {
   grid-area: section;
   background-color: whitesmoke;
   display: block;
@@ -98,13 +114,19 @@ section {
   padding: 60px;
 }
 
-p {
-  margin: 20px;
-}
+
 
 .icons,
 .logos {
   text-align: center;
+}
+
+.logos {
+  margin-bottom: 30px;
+}
+
+.logos img {
+  margin: 10px;
 }
 .bici-logo {
   margin-bottom: 10px;
@@ -114,89 +136,47 @@ footer {
   grid-area: footer;
   margin-top: 50px;
 }
-.logos img {
-  margin-right: 40px;
-  margin-bottom: 40px;
-}
+
 
 .information {
   font-size: 30px;
 }
 
-/*SECCIÓN PROYECTS DESKTOP CON GRID */
+.row div img:hover {
+  transform: scale(1.05, 1.05);
 
-main img {
-  margin: 50px;
-  width: 300px;
-  border-radius: 20px;
 }
 
-p {
-  margin: 40px;
-}
-
-article h3 {
-  margin-top: 20px;
-  text-align: center;
-}
-
-/* seccion proyectos DESKTOP */
-
-.grid-proyect-block {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: (repeat, 4fr);
-  grid-template-areas:
-    "proyect-img1 proyect-info1"
-    "proyect-img2 proyect-info2"
-    "proyect-img3 proyect-info3"
-    "proyect-img4 proyect-info4";
-}
-.proyect-img:hover {
-  transform: scale(1.2, 1.2);
-}
-
-.proyect-img {
-  margin: auto;
+.row {
+  margin-bottom: 20px;
+  
 }
 
 .proyect-info {
-  background-color: aquamarine;
-  grid-area: certification-info1;
-  margin: 50px;
+  background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+ padding: 20px;
   border-radius: 20px;
 }
 
-.proyect-img1 {
-  grid-area: proyect-img1;
+.img-container {
+  position: relative;
+
+}
+.proyect-img {
+  width: 100%;
+  max-height: 300px;
+  top: 50%;
+  left: 50%;
+  
 }
 
-.proyect-info1 {
-  grid-area: proyect-info1;
-}
-
-.proyect-img2 {
-  grid-area: proyect-img2;
-}
-
-.proyect-info2 {
-  grid-area: proyect-info2;
-}
-
-.proyect-img3 {
-  grid-area: proyect-img3;
-}
-
-.proyect-info3 {
-  grid-area: proyect-info3;
-}
-
-.proyect-img4 {
-  grid-area: proyect-img4;
-}
-
-.proyect-info4 {
-  grid-area: proyect-info4;
+.container {
+  margin-top: 40px;
 }
 
 /* SECCIÓN CERTIFICATIONS DESKTOP CON GRID*/
@@ -300,46 +280,7 @@ fieldset {
     font-size: 20px;
   }
 
-  /* SECCIÓN PROYECTOS MOBILE*/
 
-  .proyects-heading {
-    text-align: center;
-  }
-
-  .grid-proyect-block {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(repeat, 8fr);
-    grid-template-areas:
-      "proyect-img1"
-      "proyect-info1"
-      "proyect-img2"
-      "proyect-info2"
-      "proyect-img3"
-      "proyect-info3"
-      "proyect-img4"
-      "proyect-info4";
-  }
-
-  .proyect-img1 img {
-    margin: 30px 30px;
-    border-radius: 20px;
-  }
-
-  .proyect-img2 img {
-    margin-top: 20px;
-    border-radius: 20px;
-  }
-
-  .proyect-img3 img {
-    margin-top: 20px;
-    border-radius: 20px;
-  }
-
-  .proyect-img4 img {
-    margin-top: 20px;
-    border-radius: 20px;
-  }
 
   /* SECCIÓN certificates MOBILE */
 
