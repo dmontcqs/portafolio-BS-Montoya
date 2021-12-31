@@ -1,18 +1,31 @@
-@charset "UTF-8";
+//variables globales 
+$gray-color: rgba( 255, 255, 255, 0.25 );
+$blue-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+
+
 body {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: $gray-color; 
 }
 
-.proyect-info {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+//mixins
+
+@mixin caja-proyecto {
+
+  background: $gray-color;
+  box-shadow: $blue-shadow;
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 20px
 }
+
+.proyect-info{
+  @include caja-proyecto;
+}
+
+
 
 * {
   margin: 0;
@@ -28,6 +41,7 @@ html {
 /* body {
   background-color: gray;
 } */
+
 .index-conatiner {
   margin: 0 auto;
   width: 100%;
@@ -35,7 +49,10 @@ html {
   display: grid;
   grid-template-columns: 3fr;
   grid-template-rows: 0.3fr 5fr 0.5fr;
-  grid-template-areas: "header header header" "section section section" "footer footer footer";
+  grid-template-areas:
+    "header header header"
+    "section section section"
+    "footer footer footer";
 }
 
 nav {
@@ -55,8 +72,7 @@ header {
 ul {
   list-style: none;
   background-color: whitesmoke;
-  font-size: 0;
-  /* truco por el uso de inline-block*/
+  font-size: 0; /* truco por el uso de inline-block*/
 }
 
 li {
@@ -76,7 +92,7 @@ li {
 a {
   padding: 1vw 1vw;
   text-decoration: none;
-  color: #fa7b90;
+  color: rgb(250, 123, 144);
   font-size: 25px;
   letter-spacing: 0.4vw;
 }
@@ -87,7 +103,8 @@ a {
   margin-left: 50px;
 }
 
-.carousel-container {
+
+.carousel-container{
   height: 500px;
 }
 
@@ -97,9 +114,10 @@ div .caption-section {
   bottom: 50%;
 }
 
-div .first-caption {
-  color: black;
+div .first-caption{
+ color: black;
 }
+
 
 .button-cantainer > .button-send {
   background-color: pink;
@@ -116,6 +134,8 @@ div .first-caption {
   padding: 60px;
 }
 
+
+
 .icons,
 .logos {
   text-align: center;
@@ -128,14 +148,15 @@ div .first-caption {
 .logos img {
   margin: 10px;
 }
-
 .bici-logo {
   margin-bottom: 10px;
 }
 
 footer {
+  
   margin-top: 50px;
 }
+
 
 .information {
   font-size: 30px;
@@ -143,21 +164,35 @@ footer {
 
 .row div img:hover {
   transform: scale(1.05, 1.05);
+
 }
 
 .row {
   margin-bottom: 20px;
+  
 }
+
+//  .proyect-info {
+// background: rgba( 255, 255, 255, 0.25 );
+// box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+// backdrop-filter: blur( 4px );
+// -webkit-backdrop-filter: blur( 4px );
+// border-radius: 10px;
+// border: 1px solid rgba( 255, 255, 255, 0.18 );
+//  padding: 20px;
+//   border-radius: 20px;
+// } 
 
 .img-container {
   position: relative;
-}
 
+}
 .proyect-img {
   width: 100%;
   max-height: 300px;
   top: 50%;
   left: 50%;
+  
 }
 
 .container {
@@ -165,13 +200,16 @@ footer {
 }
 
 /* SECCIÓN CERTIFICATIONS DESKTOP CON GRID*/
+
 .img-box {
   margin: auto;
+  
 }
 
 .img-box:hover {
-  transform: scale(1.2, 1.2);
-}
+    transform: scale(1.2, 1.2);
+    
+  }
 
 .certification-info {
   background-color: aquamarine;
@@ -184,7 +222,11 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 4fr);
-  grid-template-areas: "img-box1 certification-info1" "img-box2 certification-info2" "img-box3 certification-info3" "img-box4 certification-info4";
+  grid-template-areas:
+    "img-box1 certification-info1"
+    "img-box2 certification-info2"
+    "img-box3 certification-info3"
+    "img-box4 certification-info4";
 }
 
 .img-box1 {
@@ -220,6 +262,7 @@ footer {
 }
 
 /* CONTACT */
+
 .form-section {
   margin: 0 auto;
   max-width: 800px;
@@ -239,16 +282,16 @@ fieldset {
   margin-right: 50px;
   width: 120px;
   background-color: pink;
-  border-color: #ffc2cc;
+  border-color: hsl(350, 100%, 88%);
 }
 
 .btn-primary:hover {
   background-color: pink;
-  border-color: #ffc2cc;
+  border-color: hsl(350, 100%, 88%);
 }
 
 /* MEDIA QUERIES  */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) /* DE 768pc para abajo */ {
   footer {
     margin-top: 5px;
   }
@@ -257,23 +300,35 @@ fieldset {
     font-size: 20px;
   }
 
+
+
   /* SECCIÓN certificates MOBILE */
+
   .grid-container-certificates {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(repeat, 8fr);
-    grid-template-areas: "img-box1" "certification-info1" "img-box2" "certification-info2" "img-box3" "certification-info3" "img-box4" "certification-info4";
+    grid-template-areas:
+      "img-box1"
+      "certification-info1"
+      "img-box2"
+      "certification-info2"
+      "img-box3"
+      "certification-info3"
+      "img-box4"
+      "certification-info4";
   }
 
   /* sección contact mobile */
+
   .contact-footer {
     margin-top: 30px;
   }
 
-  .logos {
-    text-align: center;
-    margin-top: 100px;
+  .logos{
+      text-align: center;
+      margin-top: 100px;
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+
