@@ -1,0 +1,41 @@
+$gray-color: rgba( 255, 255, 255, 0.25 );
+$blue-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+
+//imagenes de proyectos: 
+
+@mixin proyect-image {
+    width: 100%;
+    max-height: 300px;
+    top: 50%;
+    left: 50%;
+    
+}
+
+.proyect-img {
+   @include proyect-image; 
+}
+  
+
+
+
+//mixins
+
+@mixin caja-proyecto {
+
+    background: $gray-color;
+    box-shadow: $blue-shadow;
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 20px;
+    border-radius: 20px
+}
+  
+
+.proyect-info{
+    @include caja-proyecto;
+}
+  
+  
+  

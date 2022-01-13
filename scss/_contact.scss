@@ -1,0 +1,50 @@
+
+/* CONTACT */
+
+.form-section {
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: whitesmoke;
+  }
+  
+  fieldset {
+    text-align: center;
+  }
+  
+  .mb-3 {
+    padding: 20px;
+  }
+  
+  .btn-primary {
+    float: right;
+    margin-right: 50px;
+    width: 120px;
+    &:hover{
+        background-color: pink;
+        border-color: hsl(350, 100%, 88%);
+      }
+  }
+  
+
+
+  
+  
+
+/* MEDIA QUERIES  */
+/* DE 768pc para abajo */ 
+@media screen and (max-width: 768px) {
+    
+    /* sección contact mobile */
+  
+    .contact-footer {
+      margin-top: 30px;
+    }
+  
+    .logos{
+        text-align: center;
+        margin-top: 100px;
+    }
+  }
+  
+  
+  
