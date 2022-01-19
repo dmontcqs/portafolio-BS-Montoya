@@ -1,6 +1,14 @@
 
 /* CONTACT */
 
+
+.h1-contact-title {
+  letter-spacing: 10px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+
 .form-section {
     margin: 0 auto;
     max-width: 800px;
@@ -25,8 +33,9 @@
       }
   }
   
-
-
+  .button-container > .button-send {
+    background-color: pink;
+  }
   
   
 

@@ -15,6 +15,10 @@ $blue-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
    @include proyect-image; 
 }
   
+.row div img:hover {
+    transform: scale(1.05, 1.05);
+  
+  }
 
 
 

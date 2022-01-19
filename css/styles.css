@@ -6,6 +6,10 @@
   left: 50%;
 }
 
+.row div img:hover {
+  transform: scale(1.05, 1.05);
+}
+
 .proyect-info {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -50,6 +54,12 @@
 }
 
 /* CONTACT */
+.h1-contact-title {
+  letter-spacing: 10px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
 .form-section {
   margin: 0 auto;
   max-width: 800px;
@@ -74,6 +84,10 @@ fieldset {
   border-color: #ffc2cc;
 }
 
+.button-container > .button-send {
+  background-color: pink;
+}
+
 /* MEDIA QUERIES  */
 /* DE 768pc para abajo */
 @media screen and (max-width: 768px) {
@@ -87,6 +101,16 @@ fieldset {
     margin-top: 100px;
   }
 }
+div .caption-section {
+  padding-top: unset;
+  padding-bottom: unset;
+  bottom: 50%;
+}
+
+div .first-caption {
+  color: black;
+}
+
 body {
   background-color: rgba(255, 255, 255, 0.25);
 }
@@ -113,7 +137,6 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
-  grid-area: header;
 }
 
 ul {
@@ -123,66 +146,17 @@ ul {
   /* truco por el uso de inline-block*/
 }
 
-li {
-  list-style: none;
-  text-align: center;
-  /* AQUI EL DISPLAY ES LO IMPORTANTE */
-  display: inline-block;
-  /* Yo tenia solo display flex y ocasionaba desboramiento*/
-  width: 25%;
-  font-size: 20em;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: background-color 0.5s;
-  padding: 1vw;
-}
-
 a {
   padding: 1vw 1vw;
   text-decoration: none;
-  color: #fa7b90;
   font-size: 25px;
   letter-spacing: 0.4vw;
-}
-
-.h1-contact-title {
-  letter-spacing: 10px;
-  margin-top: 50px;
-  margin-left: 50px;
-}
-
-.carousel-container {
-  height: 500px;
-}
-
-div .caption-section {
-  padding-top: unset;
-  padding-bottom: unset;
-  bottom: 50%;
-}
-
-div .first-caption {
-  color: black;
-}
-
-.button-container > .button-send {
-  background-color: pink;
-}
-
-.info {
-  grid-area: section;
-  background-color: whitesmoke;
-  display: block;
-  margin: 100px auto;
-  text-align: center;
-  border-bottom: solid;
-  border-top: solid;
-  padding: 60px;
 }
 
 .icons,
 .logos {
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .logos {
@@ -201,24 +175,12 @@ footer {
   margin-top: 50px;
 }
 
-.information {
-  font-size: 30px;
-}
-
-.row div img:hover {
-  transform: scale(1.05, 1.05);
-}
-
 .row {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-.img-container {
-  position: relative;
-}
-
-.container {
-  margin-top: 40px;
+.carousel-container .car-item {
+  max-height: 700px;
 }
 
 /*# sourceMappingURL=styles.css.map */
