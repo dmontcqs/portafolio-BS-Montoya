@@ -65,17 +65,19 @@ a {
 
 .logos {
   margin-bottom: $margin-bottom;
+  a{
+    text-decoration: none;
+  }
+  img {
+    margin: 10px;
+  }
 }
 
-.logos img {
-  margin: 10px;
-}
 .bici-logo {
   margin-bottom: 10px;
 }
 
 footer {
-  
   margin-top: 50px;
 }
 
@@ -84,8 +86,10 @@ footer {
   margin-bottom: $margin-bottom; 
 }
 
+
 // altura de carrusel: 
 
 .carousel-container .car-item {
   max-height: 700px;
 }
+

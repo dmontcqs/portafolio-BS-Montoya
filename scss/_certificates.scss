@@ -1,9 +1,11 @@
-/* SECCIÓN CERTIFICATIONS DESKTOP CON GRID*/
+/* SECCIÓN CERTIFICATIONS*/
 
 $gray-color: rgba( 255, 255, 255, 0.25 );
 $blue-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+$border-color: rgba( 255, 255, 255, 0.18 );
+$space: 20px; 
   
-  .img-box:hover {
+  .certificate-img:hover {
       transform: scale(1.2, 1.2);
       
     }
@@ -15,11 +17,10 @@ $blue-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    padding: 20px;
-    border-radius: 20px;
-    margin-bottom: 10%;
-    margin-top: 10%;
+    border: 1px solid $border-color;
+    padding: $space;
+    border-radius: $space;
+    margin: 10% 7%;
 
 }
 
@@ -28,18 +29,25 @@ $blue-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 }
 
 @mixin certificate-img {
-  
-    width: 70%;
-    max-height: 400px;
-    top: 50%;
-    left: 50%;
-    margin-left: 20%;
-    margin-top: 10%; 
-    margin-bottom: 10%; 
+    display: block;
+    margin: auto;
 }
 
-  
+.js-logo {
+    width: 30%; 
+}
 
+.angular-logo{
+    width: 40%;
+}
+
+.ux-logo{
+    width: 30%
+}
+
+.html-logo{
+    margin: 0 auto; 
+}
 .certification-info {
     @include caja-certificates;
 }
@@ -48,4 +56,5 @@ $blue-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 .certificate-img{
     @include certificate-img; 
 }
+
 
