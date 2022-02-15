@@ -34,7 +34,7 @@
 }
 
 .js-logo {
-  width: 30%;
+  width: 40%;
 }
 
 .angular-logo {
@@ -46,6 +46,7 @@
 }
 
 .html-logo {
+  width: 40%;
   margin: 0 auto;
 }
 
@@ -58,12 +59,13 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 20px;
   border-radius: 20px;
-  margin: 10% 7%;
+  margin: 5% 7%;
 }
 
 .certificate-img {
   display: block;
   margin: auto;
+  margin-top: 4%;
 }
 
 /* CONTACT */

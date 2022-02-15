@@ -20,7 +20,7 @@ $space: 20px;
     border: 1px solid $border-color;
     padding: $space;
     border-radius: $space;
-    margin: 10% 7%;
+    margin: 5% 7%;
 
 }
 
@@ -31,10 +31,12 @@ $space: 20px;
 @mixin certificate-img {
     display: block;
     margin: auto;
+    margin-top: 4%;
 }
 
 .js-logo {
-    width: 30%; 
+    width: 40%; 
+
 }
 
 .angular-logo{
@@ -46,6 +48,7 @@ $space: 20px;
 }
 
 .html-logo{
+    width: 40%; 
     margin: 0 auto; 
 }
 .certification-info {
